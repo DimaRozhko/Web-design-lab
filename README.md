@@ -1,5 +1,5 @@
 # Web-design-lab
-##KPI-Web-lab##
+##KPI-Web-lab
 **Contributor: Dmytro Rozhko, KV-81**
 1. lab1 
    - Title: Development of a static interface of a Web-application
