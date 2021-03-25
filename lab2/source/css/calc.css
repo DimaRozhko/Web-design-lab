@@ -1,0 +1,5 @@
+.border-invis-focus:focus {
+    outline: none;
+    background-color: transparent !important;
+    border-color:  transparent !important;
+}
