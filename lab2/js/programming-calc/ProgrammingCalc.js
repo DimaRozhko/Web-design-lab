@@ -7,6 +7,8 @@ let calculateExpression = inputController.getCalculator();
 let viewInput = new ResultView(document.getElementById("result"));
 
 let expression = document.getElementById('expression');
+let selectResult = document.getElementById('selectResult');
+let selectExpression = document.getElementById('selectExpression');
 let opereation = document.getElementById('operation');
 viewInput.setValue(inputController.getItem().value);
 
@@ -23,6 +25,50 @@ function handlerOperation(operand) {
     opereation.value = operand;
     viewInput.setValue(calculateExpression.calculate(lastExpression, operand));
 }
+
+selectExpression.addEventListener('click', 
+    function() {
+        switch (selectExpression.value) {
+            case 'bin':
+                expression.value = parseInt(expression.value, calculateExpression
+                    .getExpression()).toString(2);
+                calculateExpression.setExpression(2);
+                break;
+            case 'oct':
+                expression.value = parseInt(expression.value, calculateExpression
+                    .getExpression()).toString(8);
+                calculateExpression.setExpression(8);
+                break;
+            case 'dec':
+                expression.value = parseInt(expression.value, calculateExpression
+                    .getExpression()).toString(10);
+                calculateExpression.setExpression(10);
+                break;
+            case 'hex':
+                expression.value = parseInt(expression.value, calculateExpression
+                    .getExpression()).toString(16);
+                calculateExpression.setExpression(16);
+                break;
+        }
+    });
+
+selectResult.addEventListener('click', 
+    function() {
+        switch (selectResult.value) {
+            case 'bin':
+                viewInput.setValue(calculateExpression.convertResult(2));
+                break;
+            case 'oct':
+                viewInput.setValue(calculateExpression.convertResult(8));
+                break;
+            case 'dec':
+                viewInput.setValue(calculateExpression.convertResult(10));
+                break;
+            case 'hex':
+                viewInput.setValue(calculateExpression.convertResult(16));
+                break;
+        }
+    });
 
 document.getElementById('equal').addEventListener('click', 
     function() {

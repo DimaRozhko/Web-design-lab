@@ -3,6 +3,8 @@ export default class Calculate {
     constructor () {
         this.result = 0;
         this.errorMessage = '';
+        this.expressionCondition = 10;
+        this.resultCondition = 10;
     }
 
     getResult() { return this.result; }
@@ -19,28 +21,52 @@ export default class Calculate {
         return res.toString();
     }
 
+    setExpression(num) { this.expressionCondition = num;}
+
+    getExpression(num) { return this.expressionCondition;}
+
+    convertResult(num) {
+        this.result = parseInt(this.result, this.resultCondition).toString(num);
+        this.resultCondition = num;
+        return this.result;
+    }
+
     calculate (expression, operation) {
-        if (expression.match(/[0-9]/)) {
+        if (expression.match(/[0-9]/) | 
+            (this.expressionCondition === 16 & expression.match(/[a-f0-9]/i))) {
             switch (operation){
                 case '+':
-                    this.result += parseFloat(expression.replace('+', ''));
+                    this.errorMessage = parseInt(expression.replace('+', ''), this.expressionCondition);
+                    this.result =  parseInt(this.result, this.resultCondition);
+                    this.result += this.errorMessage;
                     break;
                 case '-':
-                    this.result -= parseFloat(expression.replace('-', ''));
+                    this.errorMessage = parseInt(expression.replace('-', ''), this.expressionCondition);
+                    this.result =  parseInt(this.result, this.resultCondition);
+                    this.result -= this.errorMessage;
                     break;
                 case '*':
-                    this.result *= parseFloat(expression.replace('*', ''));
+                    this.errorMessage = parseInt(expression.replace('*', ''), this.expressionCondition);
+                    this.result =  parseInt(this.result, this.resultCondition);
+                    this.result *= this.errorMessage;
                     break;
                 case '/':
-                    this.result /= parseFloat(expression.replace('/', ''));
+                    this.errorMessage = parseInt(expression.replace('/', ''), this.expressionCondition);
+                    this.result =  parseInt(this.result, this.resultCondition);
+                    this.result /= this.errorMessage;
                     break;
                 case '%':
-                    this.result *= parseFloat(expression.replace('%', '')) / 100;
+                    this.errorMessage = parseInt(expression.replace('%', ''), this.expressionCondition);
+                    this.result =  parseInt(this.result, this.resultCondition);
+                    this.result *= this.errorMessage / 100;
                     break;
                 default:
-                    this.result = parseFloat(expression);
+                    this.errorMessage = parseInt(expression.replace('', ''), this.expressionCondition);
+                    this.result =  parseInt(this.result, this.resultCondition);
+                    this.result = this.errorMessage;
                     break;
             }
+            this.result = parseFloat(this.result.toString(this.resultCondition));
             this.errorMessage = '';
         } else if (expression.length != 0) {
             console.log(expression);

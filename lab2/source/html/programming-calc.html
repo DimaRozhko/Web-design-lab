@@ -97,147 +97,159 @@
                         <div class="row mt-4">
                             <div class="col-md-3 text-secondary display-6">Expression</div>
                             <div class="col-md-2 text-secondary display-6">
-                                <select class="w-100 text-secondary display-6 border border-light border-invis-focus">
-                                    <option class="h4">BIN</option>
-                                    <option class="h4">OCT</option>
-                                    <option class="h4" selected>DEC</option>
-                                    <option class="h4">HEX</option>
+                                <select  id="selectExpression"
+                                    class="w-100 text-secondary display-6 border border-light border-invis-focus">
+                                    <option class="h4" value="bin">BIN</option>
+                                    <option class="h4" value="oct">OCT</option>
+                                    <option class="h4" value="dec" selected>DEC</option>
+                                    <option class="h4" value="hex">HEX</option>
                                 </select>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-1">
                                 <input type="text" class="w-100 border border-light text-end display-6 border-invis-focus"
-                                    placeholder="input">
+                                    id="operation" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="w-100 border border-light text-end display-6 border-invis-focus"
+                                    placeholder="input" id="expression">
                             </div>
                         </div>
                         <div class="row mt-2 mb-4">
                             <div class="col-md-3 text-secondary display-6">Result</div>
                             <div class="col-md-2 text-secondary display-6">
-                                <select class="w-100 text-secondary display-6 border border-light border-invis-focus">
-                                    <option class="h4">BIN</option>
-                                    <option class="h4">OCT</option>
-                                    <option class="h4" selected>DEC</option>
-                                    <option class="h4">HEX</option>
+                                <select id="selectResult"
+                                    class="w-100 text-secondary display-6 border border-light border-invis-focus">
+                                    <option class="h4" value="bin">BIN</option>
+                                    <option class="h4" value="oct">OCT</option>
+                                    <option class="h4" value="dec" selected>DEC</option>
+                                    <option class="h4" value="hex">HEX</option>
                                 </select>
                             </div>
                             <div class="col-md-7">
-                                <div class="float-end display-6">
-                                    <strong>3
+                                <div class="float-end display-6"  id="result">
+                                    0
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-1 mb-1">
                             <div class="col-md-4"></div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="factorial">
                                     x!</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="sin">
                                     sin</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="cos">
                                     cos</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="percent">
                                     %</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
-                                    AC</button>
+                                <button class="btn btn-secondary w-100" type="button" id="erase">
+                                    CE</button>
                             </div>
                         </div>
                         <div class="row mt-1 mb-1">
                             <div class="col-md-4"></div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="ln">
                                     ln</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="seven">
                                     7</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="eighth">
                                     8</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="nine">
                                     9</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="division">
                                     /</button>
                             </div>
                         </div>
                         <div class="row mt-1 mb-1">
                             <div class="col-md-4"></div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="log">
                                     log</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="four">
                                     4</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="five">
                                     5</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="six">
                                     6</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="multiply">
                                     *</button>
                             </div>
                         </div>
                         <div class="row mt-1 mb-1">
                             <div class="col-md-4"></div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="sqrt">
                                     &#x221A;</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="one">
                                     1</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="two">
                                     2</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="three">
                                     3</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="minus">
                                     -</button>
                             </div>
                         </div>
                         <div class="row mt-1 mb-5">
                             <div class="col-md-4"></div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="pow">
                                     X&#x207F;</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="zero">
                                     0</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-light w-100" type="button">
+                                <button class="btn btn-light w-100" type="button" id="point">
                                     .</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-primary w-100" type="button">
+                                <button class="btn btn-primary w-100" type="button" id="equal">
                                     =</button>
                             </div>
                             <div class="col-md-1">
-                                <button class="btn btn-secondary w-100" type="button">
+                                <button class="btn btn-secondary w-100" type="button" id="plus">
                                     +</button>
+                            </div>
+                        </div>
+                        <div class="row mt-1 mb-5">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-5">
+                              <div id="error" class="h4 text-center text-danger"></div>
                             </div>
                         </div>
                     </div>
@@ -245,6 +257,7 @@
             </div>
         </div>
     </div>
+    <script type="module" src="../../js/programming-calc/ProgrammingCalc.js"></script> 
 </body>
 
 </html>
