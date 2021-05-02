@@ -12,3 +12,4 @@
    - *Task:* Develop functionality for static pages of the Web-application of the first laboratory work using the MVC template.
    - *Name:* Multi-Mode Calculator
    - *Documentation:* [click here](https://docs.google.com/document/d/1B2vj3Wk8cwj6h21oiq2hV6HuavdtHz1CMQsO4gHJRR4/edit?usp=sharing)
+3. lab3
