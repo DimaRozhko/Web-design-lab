@@ -1,0 +1,33 @@
+.w-23 {
+    width: 23%;
+}
+
+body {
+    background: linear-gradient(90deg, #0055D3, #3385ff, #66a3ff,#b3d1ff, 
+        #FFFFFF,#FFFFFF,#FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, 
+        #b3d1ff,  #66a3ff, #3385ff,#0055D3);
+}
+
+.button-auth {
+    background-color: #0055D3;
+}
+
+.button-auth:hover, .button-auth:active, .button-auth:focus {
+    color: #ffffff !important;
+    background-color: white !important;
+    border-color: #0055D3 !important;
+}
+
+.button-text-white {
+    color: white;
+}
+
+.button-auth:hover, .button-auth:active, .button-auth:focus {
+    color: #0055D3 !important;
+}
+
+input:focus {
+    outline: none;
+    background-color: transparent !important;
+    border-color:  transparent !important;
+}
