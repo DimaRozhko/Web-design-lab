@@ -4,6 +4,7 @@
             <div class="row mt-5"></div>
             <div class="row">
                 <div class="col-md-4"></div>
+                <img class="col-md-4" src="@/assets/logo.png">
             </div>
         </div>
         <div class="container mt-5">
