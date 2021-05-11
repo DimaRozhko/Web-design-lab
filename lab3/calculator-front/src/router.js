@@ -12,12 +12,18 @@ import SignUp from '@/components/SignUp.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: UserProfile },
-  { path: '/about', component: About },
-  { path: '/log-in', component: LogIn, meta: {sidebar: false} },
-  { path: '/sign-up', component: SignUp, meta: {sidebar: false} },
-  { path: '/programming-calc', component: ProgrammingCalc },
-  { path: '/ordinary-calc', component: OrdinaryCalc }
+  { path: '/', component: UserProfile,
+    meta: { auth : false } },
+  { path: '/about', component: About,
+    meta: { auth : false } },
+  { path: '/log-in', component: LogIn, 
+    meta: {sidebar: false, auth : false } },
+  { path: '/sign-up', component: SignUp, 
+    meta: {sidebar: false, auth : false } },
+  { path: '/programming-calc', component: ProgrammingCalc,
+    meta: { auth : false } },
+  { path: '/ordinary-calc', component: OrdinaryCalc,
+    meta: { auth : false } }
 ]
 
 export default new VueRouter({

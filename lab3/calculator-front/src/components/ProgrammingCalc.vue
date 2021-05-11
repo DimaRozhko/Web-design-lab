@@ -59,6 +59,15 @@
 <script>
 import CalculatorKeyboard from '@/components/CalculatorKeyboard'
 export default {
+    beforeRouteEnter(to, from, next) {
+        if (from.meta.auth === true){
+            next();
+        }
+        else {
+            next('/log-in');
+        }
+        to.meta.auth = from.meta.auth;
+    },
     components: {
         CalculatorKeyboard
     },

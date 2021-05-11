@@ -53,6 +53,20 @@
     </div>
 </template>
 
+<script>
+export default {
+    beforeRouteEnter(to, from, next) {
+        if (from.meta.auth === true){
+            next();
+        }
+        else {
+            next('/log-in');
+        }
+        to.meta.auth = from.meta.auth;
+    },
+}
+</script>
+
 <style>
 .background {
     background: linear-gradient(white 8%, #0055D3);
